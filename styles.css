@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color2: #f0f2f5;
+  --bg-color: #fcfcd7;
+  --form-bg-color: #67be9b;
+  --red: #f04158;
+  --yellow: #f1db42;
+  --light-green: #95d0b8;
+}
+
+/* font-family: "Poppins", sans-serif;
+font-family: "Roboto", sans-serif; */
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color2);
+}
+
+main {
+  width: min(70vw, 600px);
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 3rem;
+}
+
+/***** Info *****/
+#info {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#info h2 {
+  font-size: 1.8rem;
+}
+
+#info p {
+  font-size: 1.2rem;
+}
+
+/****** Form *******/
+form {
+  background: var(--form-bg-color);
+
+  padding: 4rem;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  font-size: 1.8rem;
+
+  font-weight: 500;
+}
+
+.input input {
+  border-style: none;
+  outline: none;
+
+  border-radius: 7px;
+
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/**** Buttons ****/
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  gap: 0.8rem;
+}
+
+.buttons button {
+  width: 100%;
+
+  padding: 1rem;
+
+  border-style: none;
+  border-radius: 7px;
+}
+
+#calculate-button {
+  background: var(--yellow);
+  color: #260d33;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+#clear-button {
+  background: var(--red);
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/***** Table *****/
+table {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+table thead tr th {
+  border-radius: 10px;
+}
+
+#table {
+  border-spacing: 0 0.5rem;
+}
+
+table th {
+  padding: 1rem 2rem;
+
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+
+  border-radius: 10px;
+}
+
+table td {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+
+  background-color: white;
+}
+
+table tbody tr td:first-child {
+  border-radius: 0.35rem 0 0 0.35rem;
+}
+
+table tbody tr td:last-child {
+  border-radius: 0rem 0.35rem 0.35rem 0rem;
+}
+
+.blue td {
+  background-color: #5bcebf;
+}
+
+.green td {
+  background-color: #67be9b;
+}
+
+.yellow td {
+  background-color: #f1db42;
+}
+
+.light-orange td {
+  background-color: #f18809;
+}
+
+.orange td {
+  background-color: #eb5f07;
+}
+
+.red td {
+  background-color: #de3c2f;
+}
