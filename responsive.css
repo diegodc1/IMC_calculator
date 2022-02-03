@@ -1,0 +1,22 @@
+@media (max-width: 430px) {
+  html {
+    font-size: 55%;
+  }
+
+  #info {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .result {
+    width: 87%;
+  }
+
+  table {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+  }
+}

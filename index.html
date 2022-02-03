@@ -7,6 +7,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,26 +26,17 @@
       <section id="info">
         <h2>O que é o IMC?</h2>
         <p>
-          IMC é a sigla para Índice de Massa Corporal,que é um cálculo que serve
-          para avaliar se a pessoa está dentro do seu peso ideal em relação à
-          altura. Assim, de acordo com o valor do resultado de IMC, a pessoa
-          pode saber se está dentro do peso ideal, acima ou abaixo do peso
-          desejado.
+          IMC é a sigla para Índice de Massa Corporal, que é um cálculo que
+          serve para avaliar se a pessoa está dentro do seu peso ideal em
+          relação à altura. Assim, de acordo com o valor do resultado de IMC, a
+          pessoa pode saber se está dentro do peso ideal, acima ou abaixo do
+          peso desejado.
         </p>
       </section>
-      <form>
-        <div class="input weight-input">
-          <label for="weight">Peso</label>
-          <input
-            type="number"
-            name="weight"
-            id="weight"
-            placeholder="Digite seu peso"
-          />
-        </div>
 
+      <form>
         <div class="input height-input">
-          <label for="height">Altura</label>
+          <label for="height">Altura (ex.: 1,70)</label>
           <input
             type="number"
             name="height"
@@ -53,18 +45,40 @@
           />
         </div>
 
+        <div class="input weight-input">
+          <label for="weight">Peso (ex.: 85,7)</label>
+          <input
+            type="number"
+            name="weight"
+            id="weight"
+            placeholder="Digite seu peso"
+          />
+        </div>
+
         <div class="buttons">
-          <button id="calculate-button">Calcular</button>
-          <button id="clear-button">Limpar</button>
+          <button
+            id="calculate-button"
+            type="button"
+            onclick="calculate.showResult()"
+          >
+            Calcular
+          </button>
+          <button id="clear-button" type="button" onclick="Utils.clearInputs()">
+            Limpar
+          </button>
         </div>
       </form>
 
+      <div class="result off" id="result-container">
+        <div id="result-box"></div>
+        <small>Veja na tabela abaixo</small>
+      </div>
       <section class="table-info">
         <table id="table">
           <thead>
             <tr>
-              <th>IMC</th>
               <th>Classificação</th>
+              <th>IMC</th>
               <th>O que pode acontecer</th>
             </tr>
           </thead>
@@ -118,5 +132,7 @@
         </table>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

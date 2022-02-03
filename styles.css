@@ -11,6 +11,7 @@
   --red: #f04158;
   --yellow: #f1db42;
   --light-green: #95d0b8;
+  --text-color: #140a76;
 }
 
 /* font-family: "Poppins", sans-serif;
@@ -28,6 +29,7 @@ body {
 main {
   width: min(70vw, 600px);
   margin: auto;
+  margin-top: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -36,6 +38,11 @@ main {
   justify-content: center;
 
   gap: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--text-color);
 }
 
 /***** Info *****/
@@ -50,10 +57,13 @@ main {
 
 #info h2 {
   font-size: 1.8rem;
+  color: var(--text-color);
 }
 
 #info p {
   font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-color);
 }
 
 /****** Form *******/
@@ -69,10 +79,6 @@ form {
   gap: 3rem;
 }
 
-.title {
-  font-size: 2rem;
-}
-
 .input {
   display: flex;
   flex-direction: column;
@@ -82,6 +88,8 @@ form {
   font-size: 1.8rem;
 
   font-weight: 500;
+
+  color: white;
 }
 
 .input input {
@@ -128,6 +136,58 @@ form {
   font-weight: 700;
 }
 
+/**** Result ****/
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  width: 57%;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.result small {
+  font-size: 1rem;
+}
+
+.result.blue {
+  background: #5bcebf;
+}
+
+.result.green {
+  background: var(--form-bg-color);
+}
+
+.result.yellow {
+  background: #f1db42;
+}
+
+.result.light-orange {
+  background: #f18809;
+}
+
+.result.orange {
+  background: #eb5f07;
+}
+
+.result.red {
+  background: #de3c2f;
+}
+
+.result p {
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.result.off {
+  display: none;
+}
+
 /***** Table *****/
 table {
   font-family: "Poppins", sans-serif;
@@ -150,6 +210,7 @@ table th {
   font-weight: 600;
 
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 table td {
