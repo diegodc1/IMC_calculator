@@ -17,14 +17,14 @@ const calculate = {
 
     const result = weight / (height * height);
 
-    return result.toFixed(2);
+    return Number(result.toFixed(2));
   },
 
   showResult() {
     console.log(calculate.calculateResult());
     Utils.clearResults();
-    Utils.changeBgColorResult();
     HTML.addHTML();
+    Utils.changeBgColorResult();
   },
 };
 
@@ -40,13 +40,35 @@ const Utils = {
   },
 
   changeBgColorResult() {
-    if (calculate.calculateResult < 16) {
+    if (calculate.calculateResult() < 16.9) {
+      HTML.showResultBox.classList.add("light-blue");
+    } else if (
+      calculate.calculateResult() > 17 &&
+      calculate.calculateResult() < 18.4
+    ) {
       HTML.showResultBox.classList.add("blue");
-      console.log("blue");
-    } else if (calculate.calculateResult > 18);
-    {
+    } else if (
+      calculate.calculateResult() >= 18.5 &&
+      calculate.calculateResult() <= 24.9
+    ) {
       HTML.showResultBox.classList.add("green");
-      console.log("green");
+    } else if (
+      calculate.calculateResult() >= 25.0 &&
+      calculate.calculateResult() <= 29.9
+    ) {
+      HTML.showResultBox.classList.add("yellow");
+    } else if (
+      calculate.calculateResult() >= 30.0 &&
+      calculate.calculateResult() <= 34.9
+    ) {
+      HTML.showResultBox.classList.add("light-orange");
+    } else if (
+      calculate.calculateResult() >= 35.0 &&
+      calculate.calculateResult() <= 40.0
+    ) {
+      HTML.showResultBox.classList.add("orange");
+    } else if (calculate.calculateResult() >= 40.0) {
+      HTML.showResultBox.classList.add("red");
     }
   },
 };

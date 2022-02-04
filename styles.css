@@ -136,6 +136,11 @@ form {
   font-weight: 700;
 }
 
+.buttons button:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
 /**** Result ****/
 .result {
   display: flex;
@@ -152,6 +157,10 @@ form {
 
 .result small {
   font-size: 1rem;
+}
+
+.result.light-blue {
+  background: #2bcebf;
 }
 
 .result.blue {
@@ -226,6 +235,10 @@ table tbody tr td:first-child {
 
 table tbody tr td:last-child {
   border-radius: 0rem 0.35rem 0.35rem 0rem;
+}
+
+.light-blue td {
+  background-color: #2bcebf;
 }
 
 .blue td {
