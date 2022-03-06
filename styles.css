@@ -159,34 +159,6 @@ form {
   font-size: 1rem;
 }
 
-.result.light-blue {
-  background: #2bcebf;
-}
-
-.result.blue {
-  background: #5bcebf;
-}
-
-.result.green {
-  background: var(--form-bg-color);
-}
-
-.result.yellow {
-  background: #f1db42;
-}
-
-.result.light-orange {
-  background: #f18809;
-}
-
-.result.orange {
-  background: #eb5f07;
-}
-
-.result.red {
-  background: #de3c2f;
-}
-
 .result p {
   font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
@@ -237,30 +209,58 @@ table tbody tr td:last-child {
   border-radius: 0rem 0.35rem 0.35rem 0rem;
 }
 
-.light-blue td {
-  background-color: #2bcebf;
+.light-blue,
+.blue,
+.green,
+.yellow,
+.light-orange,
+.orange,
+.red {
+  transition: all 0.7s linear;
 }
 
-.blue td {
+.light-blue td,
+.result.light-blue {
+  background-color: #2bcebf;
+  transition: all 0.4s linear;
+}
+
+.blue td,
+.result.blue {
   background-color: #5bcebf;
 }
 
-.green td {
+.green td,
+.result.green {
   background-color: #67be9b;
 }
 
-.yellow td {
+.yellow td,
+.result.yellow {
   background-color: #f1db42;
 }
 
-.light-orange td {
+.light-orange td,
+.result.light-orange {
   background-color: #f18809;
 }
 
-.orange td {
+.orange td,
+.result.orange {
   background-color: #eb5f07;
 }
 
-.red td {
+.red td,
+.result.red {
   background-color: #de3c2f;
+}
+
+.light-blue.focus,
+.blue.focus,
+.green.focus,
+.yellow.focus,
+.light-orange.focus,
+.orange.focus,
+.red.focus {
+  transform: scale(1.08);
 }

@@ -33,42 +33,57 @@ const Utils = {
     calculate.height.value = "";
     calculate.weight.value = "";
     HTML.showResultBox.classList.add("off");
+    window.location.reload();
   },
 
   clearResults() {
     HTML.resultBox.innerHTML = "";
+    HTML.lightBlueBox.classList.remove("focus");
+    HTML.blueBox.classList.remove("focus");
+    HTML.greenBox.classList.remove("focus");
+    HTML.yellowBox.classList.remove("focus");
+    HTML.lightOrangeBox.classList.remove("focus");
+    HTML.orangeBox.classList.remove("focus");
+    HTML.redBox.classList.remove("focus");
   },
 
   changeBgColorResult() {
     if (calculate.calculateResult() < 16.9) {
       HTML.showResultBox.classList.add("light-blue");
+      HTML.lightBlueBox.classList.add("focus");
     } else if (
       calculate.calculateResult() > 17 &&
       calculate.calculateResult() < 18.4
     ) {
       HTML.showResultBox.classList.add("blue");
+      HTML.blueBox.classList.add("focus");
     } else if (
       calculate.calculateResult() >= 18.5 &&
       calculate.calculateResult() <= 24.9
     ) {
       HTML.showResultBox.classList.add("green");
+      HTML.greenBox.classList.add("focus");
     } else if (
       calculate.calculateResult() >= 25.0 &&
       calculate.calculateResult() <= 29.9
     ) {
       HTML.showResultBox.classList.add("yellow");
+      HTML.yellowBox.classList.add("focus");
     } else if (
       calculate.calculateResult() >= 30.0 &&
       calculate.calculateResult() <= 34.9
     ) {
       HTML.showResultBox.classList.add("light-orange");
+      HTML.lightBlueBox.classList.add("focus");
     } else if (
       calculate.calculateResult() >= 35.0 &&
       calculate.calculateResult() <= 40.0
     ) {
       HTML.showResultBox.classList.add("orange");
+      HTML.orangeBox.classList.add("focus");
     } else if (calculate.calculateResult() >= 40.0) {
       HTML.showResultBox.classList.add("red");
+      HTML.redBox.classList.add("focus");
     }
   },
 };
@@ -76,6 +91,13 @@ const Utils = {
 const HTML = {
   resultBox: document.querySelector("#result-container div"),
   showResultBox: document.querySelector("#result-container"),
+  lightBlueBox: document.querySelector("#light-blue-box"),
+  blueBox: document.querySelector("#blue-box"),
+  greenBox: document.querySelector("#green-box"),
+  yellowBox: document.querySelector("#yellow-box"),
+  lightOrangeBox: document.querySelector("#light-orange-box"),
+  orangeBox: document.querySelector("#orange-box"),
+  redBox: document.querySelector("#red-box"),
 
   addHTML() {
     HTML.showResultBox.classList.remove("off");
